@@ -1,3 +1,4 @@
+/* Variables de color */
 :root {
     --linen: #f6efe5ff;
     --desert-sand: #cdae9aff;
@@ -6,34 +7,68 @@
     --lavender-blush: #f3dde5ff;
 }
 
+/* Estilo general del cuerpo */
 body {
     background-color: var(--linen);
     font-family: Arial, sans-serif;
 }
 
+/* Navbar */
 .navbar {
     background-color: var(--plum);
 }
 
-.navbar-brand span {
-    font-size: 1.5rem;
-    font-weight: bold;
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; /* Logo redondeado */
+    object-fit: cover; /* Mantener proporción sin deformarse */
+    margin-right: 10px;
+}
+
+.navbar-nav .nav-link {
+    margin-left: 15px;
+    font-size: 1.1rem;
 }
 
 .nav-link:hover {
     color: var(--lavender-blush) !important;
 }
 
+/* Estilo del texto de la marca */
+.brand-name {
+    font-family: "Architects Daughter", cursive; /* Fuente elegante */
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--linen);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 1px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.brand-name:hover {
+    transform: scale(1.1);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+}
+
+/* Hero section */
 .hero {
     background: var(--lavender-blush);
     padding: 50px;
     color: var(--plum);
 }
 
+/* Footer */
 footer {
     color: var(--chinese-violet);
 }
 
+/* Estilo de las tarjetas */
 .card {
     border: none;
     transition: transform 0.3s;
@@ -43,26 +78,25 @@ footer {
     transform: scale(1.05);
 }
 
-.carousel-caption h5 {
-    background-color: var(--chinese-violet);
+/* Carrusel */
+.carousel-caption h5,
+.carousel-caption p {
     padding: 5px;
     border-radius: 5px;
     display: inline-block;
+}
+
+.carousel-caption h5 {
+    background-color: var(--chinese-violet);
 }
 
 .carousel-caption p {
     background-color: var(--desert-sand);
-    padding: 5px;
-    border-radius: 5px;
-    display: inline-block;
 }
 
-.navbar-brand img {
-    border-radius: 50%; /* Logo redondeado */
-    object-fit: cover; /* Para que mantenga proporción sin deformarse */
-}
-
-.navbar-nav .nav-link {
-    margin-left: 15px;
-    font-size: 1.1rem;
-}
+.architects-daughter-regular {
+    font-family: "Architects Daughter", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
