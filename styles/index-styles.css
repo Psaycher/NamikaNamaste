@@ -100,3 +100,21 @@ footer {
     font-style: normal;
   }
   
+  .carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: var(--chinese-violet); /* Cambiar color de fondo */
+    border-radius: 50%; /* Bordes redondeados */
+    width: 40px; /* Ajustar tamaño */
+    height: 40px; /* Ajustar tamaño */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidad */
+}
+
+.carousel-control-prev-icon::after,
+.carousel-control-next-icon::after {
+    content: ''; /* Asegurar que no haya texto */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%; /* Ajustar el ancho de los botones */
+}
