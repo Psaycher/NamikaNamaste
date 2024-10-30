@@ -56,3 +56,13 @@ footer {
     border-radius: 5px;
     display: inline-block;
 }
+
+.navbar-brand img {
+    border-radius: 50%; /* Logo redondeado */
+    object-fit: cover; /* Para que mantenga proporción sin deformarse */
+}
+
+.navbar-nav .nav-link {
+    margin-left: 15px;
+    font-size: 1.1rem;
+}
