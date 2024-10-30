@@ -1,12 +1,58 @@
+:root {
+    --linen: #f6efe5ff;
+    --desert-sand: #cdae9aff;
+    --chinese-violet: #95638cff;
+    --plum: #884180ff;
+    --lavender-blush: #f3dde5ff;
+}
+
+body {
+    background-color: var(--linen);
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: var(--plum);
+}
+
+.navbar-brand span {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    color: var(--lavender-blush) !important;
+}
+
 .hero {
-    background-color: #e0f7fa;
+    background: var(--lavender-blush);
     padding: 50px;
+    color: var(--plum);
+}
+
+footer {
+    color: var(--chinese-violet);
 }
 
 .card {
+    border: none;
     transition: transform 0.3s;
 }
 
 .card:hover {
     transform: scale(1.05);
+}
+
+.carousel-caption h5 {
+    background-color: var(--chinese-violet);
+    padding: 5px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.carousel-caption p {
+    background-color: var(--desert-sand);
+    padding: 5px;
+    border-radius: 5px;
+    display: inline-block;
 }

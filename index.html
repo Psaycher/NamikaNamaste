@@ -4,64 +4,131 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Namika Namaste</title>
-
+    
     <!-- CSS de Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
     <link rel="stylesheet" href="./styles/index-styles.css">
 </head>
 <body>
-    <header class="bg-success text-white text-center p-3">
-        <h1>Namika Namaste</h1>
-        <nav>
-            <ul class="nav justify-content-center">
-                <li class="nav-item"><a class="nav-link text-white" href="#home">Inicio</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#courses">Cursos</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#contact">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="home" class="hero text-center py-5 bg-light">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg" style="background-color: var(--plum);">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="./img/logo.png" alt="Logo Namika Namaste" width="40" height="40" class="me-2">
+                <span class="text-white">Namika Namaste</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#home">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#courses">Cursos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#contact">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <section id="home" class="hero text-center py-5">
         <h2>Bienvenido a Namika Namaste</h2>
         <p>Tu espacio para aprender y crecer con tranquilidad.</p>
         <button id="exploreBtn" class="btn btn-primary">Explorar Cursos</button>
     </section>
 
+    <!-- CARROUSEL -->
+    <section id="carousel" class="container my-5 d-flex justify-content-center">
+        <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel" style="width: 50%;">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./img/carrousel1.jpg" class="d-block w-100" alt="Primera Imagen">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Curso de Meditación</h5>
+                        <p>Explora el arte de la calma interior.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/carrousel2.png" class="d-block w-100" alt="Segunda Imagen">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Yoga para Principiantes</h5>
+                        <p>Encuentra equilibrio en cada movimiento.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/carrousel3.png" class="d-block w-100" alt="Tercera Imagen">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Talleres Virtuales</h5>
+                        <p>Participa desde cualquier lugar del mundo.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+    </section>
+<!-- CARDS -->
     <section id="courses" class="container my-5">
-        <h3 class="text-center mb-4">Nuestros Cursos</h3>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Introducción a la Meditación</h5>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="/img/carrousel1.jpg" class="card-img-top" alt="Curso 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Meditación Guiada</h5>
+                        <p class="card-text">Aprende a meditar con expertos certificados.</p>
+                        <a href="#" class="btn btn-primary">Más Info</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <div class="card-body text-center">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="./img/carrousel2.png" class="card-img-top" alt="Curso 2">
+                    <div class="card-body">
                         <h5 class="card-title">Yoga para Principiantes</h5>
+                        <p class="card-text">Una introducción al yoga para todos los niveles.</p>
+                        <a href="#" class="btn btn-primary">Más Info</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Mindfulness y Bienestar</h5>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="./img/carrousel3.png" class="card-img-top" alt="Curso 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Taller de Respiración</h5>
+                        <p class="card-text">Domina técnicas de respiración para reducir el estrés.</p>
+                        <a href="#" class="btn btn-primary">Más Info</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-success text-white text-center py-3">
+    <!-- FOOTER -->
+    <footer class="text-center py-4" style="background-color: var(--desert-sand);">
         <p>© 2024 Namika Namaste - Todos los derechos reservados.</p>
+        <div>
+            <a href="#"><i class="bi bi-facebook me-3"></i></a>
+            <a href="#"><i class="bi bi-instagram me-3"></i></a>
+            <a href="#"><i class="bi bi-youtube"></i></a>
+        </div>
     </footer>
-
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+    
     <!-- JS de Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
     <script src="./scripts/index_js.js"></script>
 </body>
 </html>
